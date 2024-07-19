@@ -1,0 +1,110 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.gallery__img {
+  max-width: 600px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow:
+    0px 0px 2.2px rgba(0, 0, 0, 0.017),
+    0px 0px 5.3px rgba(0, 0, 0, 0.024),
+    0px 0px 10px rgba(0, 0, 0, 0.03),
+    0px 0px 17.9px rgba(0, 0, 0, 0.036),
+    0px 0px 33.4px rgba(0, 0, 0, 0.043),
+    0px 0px 80px rgba(0, 0, 0, 0.06);
+}
+
+.zoom {
+  transform: translateX(-150%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform ease-in-out 300ms;
+  z-index: 1000;
+}
+
+.zoom--show {
+  transform: translateX(0%);
+}
+
+.zoom__bg {
+  cursor: not-allowed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.zoom__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--border-radius-2x);
+  overflow: hidden;
+}
+
+.zoom__img {
+  cursor: zoom-in;
+  object-fit: cover;
+  max-width: 1200px;
+  transform-origin: center center;
+  background-color: red;
+  box-shadow:
+    0px 0px 2.2px rgba(0, 0, 0, 0.017),
+    0px 0px 5.3px rgba(0, 0, 0, 0.024),
+    0px 0px 10px rgba(0, 0, 0, 0.03),
+    0px 0px 17.9px rgba(0, 0, 0, 0.036),
+    0px 0px 33.4px rgba(0, 0, 0, 0.043),
+    0px 0px 80px rgba(0, 0, 0, 0.06);
+  transition: transform 200ms;
+}
+
+.zoom__close {
+  cursor: pointer;
+  position: absolute;
+  color: var(--font-color);
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  outline: none;
+}
+
+.zoom__icon {
+  position: absolute;
+  font-size: 1rem;
+  left: 20%;
+  bottom: 20%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .zoom__img {
+    max-width: 800px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .gallery__img {
+    width: 100%;
+  }
+
+  .zoom__content {
+    border-radius: var(--border-radius);
+  }
+
+  .zoom__img {
+    max-width: 95vw;
+  }
+
+  .zoom__close {
+    display: none;
+  }
+}

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BULC (IEEE) - Gallery</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../public/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../public/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../public/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../public/favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://unpkg.com/js-image-zoom@0.7.0/js-image-zoom.js"
+      type="application/javascript"
+    ></script>
+    <link rel="stylesheet" href="../global-styles.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="http://localhost:8080/index.html">
+        <img
+          src="../public/images/ieee.jpg"
+          alt="IEEE logo"
+          class="header__logo"
+        />
+      </a>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <a href="../index.html" class="header__link"
+            >Home</a
+          >
+          <a
+            href="http://localhost:8080/gallery/"
+            class="header__link header__link--active"
+            >Gallery</a
+          >
+        </ul>
+      </nav>
+      <div class="menu">
+        <div class="menu__bar"></div>
+        <div class="menu__bar"></div>
+        <div class="menu__bar"></div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="gallery">
+        <img
+          src="../public/images/slide1.jpg"
+          alt="Slide 1"
+          class="gallery__img"
+        />
+        <img
+          src="../public/images/slide2.jpg"
+          alt="Slide 2"
+          class="gallery__img"
+        />
+        <img
+          src="../public/images/slide3.jpg"
+          alt="Slide 3"
+          class="gallery__img"
+        />
+        <img
+          src="../public/images/slide4.jpg"
+          alt="Slide 4"
+          class="gallery__img"
+        />
+        <img
+          src="../public/images/slide5.jpg"
+          alt="Slide 5"
+          class="gallery__img"
+        />
+      </div>
+    </div>
+
+    <div class="zoom">
+      <div class="zoom__bg glassy-effect"></div>
+      <div class="zoom__content">
+        <img class="zoom__img" />
+        <button class="zoom__close glassy-effect">
+          <i class="material-symbols-outlined zoom__icon">close</i>
+        </button>
+      </div>
+    </div>
+
+    <div class="scroll-top glassy-effect">
+      <span class="material-symbols-outlined scroll-top__icon"
+        >keyboard_arrow_up</span
+      >
+    </div>
+
+    <footer class="footer">
+      <div class="footer__head">
+        <div class="footer__sections">
+          <div class="footer__section">
+            <img
+              src="../public/images/ieee.jpg"
+              alt="IEEE logo"
+              class="footer__logo"
+            />
+          </div>
+        </div>
+        <div class="footer__section">
+          <div class="footer__title">About Us</div>
+          <div class="footer__desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            minima tenetur natus totam dolorem, fugiat repudiandae facilis illum
+          </div>
+        </div>
+        <div class="footer__section">
+          <div class="footer__title">Navigation</div>
+          <div class="footer__desc">
+            <div>
+              <a href="http://localhost:8080/index.html" class="footer__link"
+                >Home</a
+              >
+            </div>
+            <div>
+              <a href="http://localhost:8080/index.html" class="footer__link"
+                >Gallery</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="footer__separator" />
+      <div class="footer__foot">
+        <div class="footer__desc">BULC IEEE &copy; 2024 All Right Reserved</div>
+        <div class="footer__socials">
+          <a
+            href="https://www.instagram.com/ieeebulc?igsh=Z3BwdWNwc2F0bXdx"
+            target="_blank"
+            class="fa fa-instagram footer__social"
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/ieee-bulc-student-chapter-official/"
+            target="_blank"
+            class="fa fa-linkedin footer__social"
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="../global-script.js"></script>
+  <script src="script.js"></script>
+</html>
